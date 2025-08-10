@@ -1,10 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 @import 'tailwindcss';
 
 @theme {
   --font-roboto: 'Roboto', sans-serif;
   --font-inter: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  --body-color: #333e48;
+
+  /* --font-body-weight: 400;   ===   Font-Normal */
+  /* --body-bg-color: #ffffff;  ===   bg-white */
+  /* --body-font-size: 14px;    ===   text-[14px]  */
+  /* --body-font                ===   font-inter (above)  */
+
+  --heading-size-h1: 36px;
+  --heading-size-h2: 30px;
+  --heading-size-h3: 22px;
+  --heading-size-h4: 20px;
+  --heading-size-h5: 18px;
+  --heading-size-h6: 16px;
+  --heading-1-weight: 600;
+  --heading-2-weight: 600;
+  --heading-3-weight: 600;
+  --heading-4-weight: 600;
+  --heading-5-weight: 600;
+  --heading-6-weight: 600;
+  --topbar-bg-color: #ffffff;
+  --topbar-text-color: #333e48;
+  --topbar-text-color-rgba: 51, 62, 72;
+  --header-bg-color: #ffffff;
+  --text-header-color: #333e48;
+  --text-header-color-rgba: 51, 62, 72;
+  --header-text-color-hover: #fed700;
+  --bg-number-icon: #fed700;
+  --text-number-icon: #333e48;
+  --header-bg-mobile-color: #ffffff;
+  --header-mobile-text-color: #333e48;
+  --bg-color-mobile-number-icon: #333e48;
+  --color-mobile-number-icon: #333e48;
+  --nav-font-size: 14px;
+  --nav-sub-font-size: 14px;
+  --nav-link-color: #333e48;
+  --nav-link-hover-color: #333e48;
+  --nav-dropdown-background: #ffffff;
+  --nav-dropdown-link-color: #333e48;
+  --nav-dropdown-link-hover-color: #fed700;
+  --nav-bg-nav-link-hover: #fed700;
+  --menu-label-color-1: #333e48;
+  --menu-label-bg-1: #4cd964;
+  --menu-label-color-2: #ffffff;
+  --menu-label-bg-2: #007aff;
+  --menu-label-color-3: #f5f5f5;
+  --menu-label-bg-3: #fe0000;
+  --main-color: #fed700;
+  --main-color-rgba: 254, 215, 0;
+  --body-border-color: #dddddd;
+  --second-bg-color: #f5f5f5;
+  --body-color-rgba: 51, 62, 72;
+  --body-link: #333e48;
+  --body-link-hover: #fed700;
+  --body-color-2: #878787;
+  --section-heading-margin: 0 0 15px 0;
+  --section-heading-cl: #333e48;
+  --section-heading-fs: 22px;
+  --section-heading-fw: 400;
+  --sale-lb-cl: #333e48;
+  --sale-lb-bgcl: #fed700;
+  --hot-lb-cl: #333e48;
+  --hot-lb-bgcl: #fed700;
+  --new-lb-cl: #333e48;
+  --new-lb-bgcl: #12a05c;
+  --btn1-fs: 14px;
+  --btn1-fw: 700;
+  --btn1-cl: #333e48;
+  --btn1-bg-cl: #fed700;
+  --btn1-hover-cl: #f5f5f5;
+  --btn1-hover-bg-cl: #333e48;
+  --btn1-border-width: 1px;
+  --btn1-border-cl: #fed700;
+  --btn1-hover-border-cl: #333e48;
+  --btn2-fs: 14px;
+  --btn2-fw: 700;
+  --btn2-cl: #333e48;
+  --btn2-bg-cl: #e6e6e6;
+  --btn2-hover-cl: #ffffff;
+  --btn2-hover-bg-cl: #fed700;
+  --btn2-border-width: 1px;
+  --btn2-border-cl: #e6e6e6;
+  --btn2-hover-border-cl: #fed700;
+  --price-color: #343f49;
+  --price-compare-color: #848484;
+  --price-sale-color: #fe0000;
+  --rating-star-color: #fed700;
+  --rating-star-empty-color: #848484;
+  --footer-bg: ;
+  --footer-text-cl: ;
+  --product-bg-color: #ffffff;
+  --product-card-title-cl: #343f49;
+  --product-card-title-fs: 13px;
+  --product-card-vendor-fs: 13px;
+  --product-card-price-fs: 14px;
+  --product-card-price-sale-fs: 14px;
+  --product-card-price-compare-fs: 12px;
+  --breadcrumb-bg-color: #ffffff;
+  --breadcrumb-color-1: #333e48;
+  --breadcrumb-color-2: #333e48;
+  --newsletter-popup-background: #ffffff;
+  --newsletter-popup-heading-color: #333e48;
+  --newsletter-popup-subtext-color: #878787;
+  --newsletter-popup-subtext-2-color: #333e48;
+  --button-cart-bg: #e6e6e6;
+  --button-cart-hover-bg: #fed700;
+  --button-cart-cl: #ffffff;
+  --button-cart-hover-cl: #ffffff;
+  --bg-deal-section: #e6e6e6;
+  --text-deal-text: #383838;
+  --bg-dark: #181818;
+  --color-dark: #d9d9d9;
+  --border-dark: #2f3336;
+  --button-cart-bg-dark: #495057;
+  --button-cart-hover-bg-dark: #fed700;
+  --button-cart-cl-dark: #d9d9d9;
+  --button-cart-hover-cl-dark: #181818;
+  --font-bold: 700;
+  --gutter-xlg: 40px;
+  --gutter-lg: 30px;
+  --gutter-md: 25px;
+  --gutter-sm: 20px;
+  --gutter-xs: 15px;
+  --gutter-xxs: 10px;
+
+  @keyframes mmfadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes animation-header-sticky {
+    0% {
+      transform: translateY(-158px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .animation-fade-in {
+    animation: mmfadeIn 0.35s ease-in-out;
+  }
+
+  .animation-header-sticky {
+    animation: animation-header-sticky 1s ease-in-out;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
