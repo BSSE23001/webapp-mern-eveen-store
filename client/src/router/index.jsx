@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout'
 import AboutUs from '../pages/AboutUs'
 import EveenOrganics from '../pages/EveenOrganics'
 import Sale from '../pages/Sale'
+import StoreLocation from '../pages/StoreLocation'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
           {
             path: 'about-us',
             element: <AboutUs />,
+          },
+          {
+            path: 'store-location',
+            element: <StoreLocation />,
           },
         ],
       },

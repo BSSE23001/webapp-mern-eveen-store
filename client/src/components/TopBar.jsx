@@ -12,8 +12,9 @@ function TopBar() {
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='currentColor'
-          className='w-3.5 h-3.5'
+          className='w-3.5 h-3.5 text-[var(--main-color)]'
         >
+          <title>phone</title>
           <path
             fill-rule='evenodd'
             d='M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z'
@@ -27,14 +28,19 @@ function TopBar() {
       content: 'eveendotpk@gmail.com',
       icon: (
         <svg
-          version='1.1'
           xmlns='http://www.w3.org/2000/svg'
-          width='14'
-          height='14'
-          viewBox='0 0 64 64'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke-width='1.5'
+          stroke='currentColor'
+          className='w-3.5 h-3.5 text-[var(--main-color)]'
         >
-          <title>mail-1</title>
-          <path d='M59.456 53.696v-27.392q-1.152 1.28-2.496 2.304-9.536 7.36-15.232 12.096-1.792 1.536-2.944 2.368t-3.072 1.792-3.648 0.832h-0.128q-1.664 0-3.648-0.832t-3.072-1.792-2.944-2.368q-5.632-4.736-15.232-12.096-1.344-1.024-2.496-2.304v27.392q0 0.448 0.384 0.832t0.768 0.32h52.608q0.448 0 0.768-0.32t0.384-0.832zM59.456 16.192v-0.896t-0.064-0.448-0.064-0.448-0.192-0.32-0.32-0.256-0.512-0.128h-52.608q-0.448 0-0.768 0.384t-0.384 0.768q0 6.016 5.312 10.176 6.848 5.376 14.272 11.264 0.256 0.192 1.28 1.088t1.6 1.344 1.6 1.088 1.792 1.024 1.536 0.32h0.128q0.704 0 1.536-0.32t1.792-1.024 1.6-1.088 1.6-1.344 1.28-1.088q7.424-5.888 14.336-11.264 1.92-1.536 3.584-4.16t1.664-4.672zM64 14.848v38.848q0 2.368-1.664 4.032t-4.032 1.728h-52.608q-2.304 0-4.032-1.728t-1.664-4.032v-38.848q0-2.368 1.664-4.032t4.032-1.664h52.608q2.368 0 4.032 1.664t1.664 4.032z'></path>
+          <title>email_1</title>
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
+          />
         </svg>
       ),
     },
@@ -68,7 +74,7 @@ function TopBar() {
         </>
       ),
       icon: (
-        <a href='https://eveen.pk/account/login'>
+        <a href='/account/login'>
           <svg
             version='1.1'
             xmlns='http://www.w3.org/2000/svg'
@@ -104,11 +110,11 @@ function TopBar() {
             </svg>
           </span>
 
-          <div className='absolute top-full right-0 w-52 bg-white rounded-b-xl shadow-lg border border-body-border-color border-t-2 border-main-color z-10 max-h-[60vh] overflow-y-auto hidden group-hover:block transition-all duration-300 ease-in-out'>
+          <div className='absolute top-full right-0 w-[200px] bg-white rounded-b-xl shadow-lg border border-[var(--body-border-color)] border-t-2 border-t-[var(--main-color)] z-10 max-h-[60vh] overflow-y-auto hidden group-hover:block transition-all duration-300 ease-in-out'>
             <div className='flex'>
               <div className='flex-1'>
-                <div className='flex items-center justify-between p-gutter-xxs text-body-color text-xs font-bold uppercase border-b border-body-border-color'>
-                  <span>Currencies</span>
+                <div className='flex items-center justify-between py-[10px] px-[5px] ps-[10px] text-[var(--body-color)] text-xs uppercase border-b border-[var(--body-border-color)]'>
+                  <span className='font-black'>Currencies</span>
                   <svg
                     version='1.1'
                     xmlns='http://www.w3.org/2000/svg'
@@ -120,10 +126,10 @@ function TopBar() {
                     <path d='M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z'></path>
                   </svg>
                 </div>
-                <ul className='lc-currencies-list'>
+                <ul className='m-0 p-0'>
                   <li
                     data-value='PKR'
-                    className='p-gutter-xxs text-xs uppercase cursor-pointer text-body-color hover:text-body-link-hover bg-body-color-rgba/[0.05] border-l-2 border-transparent border-main-color'
+                    className='py-[5px] px-[10px] text-xs uppercase cursor-pointer text-[var(--body-color)] hover:text-[var(--body-link-hover)] bg-[rgba(51,62,72,.05)] border-l-2 border-transparent'
                   >
                     {currency}
                   </li>
@@ -137,23 +143,20 @@ function TopBar() {
   ]
 
   return (
-    <div className='hidden lg:block bg-[var(--topbar-bg-color)] py-[6px] border-b border-[rgba(var(--topbar-text-color-rgba),0.1)]'>
-      <div className='container w-full'>
+    <div className='hidden lg:block bg-white py-[6px] border-b border-[rgba(var(--topbar-text-color-rgba),0.1)]'>
+      <div className='w-full px-[15px] mx-auto'>
+        {/* Topbar Wrapper */}
         <div className='flex justify-between'>
           {/* Topbar Left */}
           <div className='flex'>
-            <ul className='list-none flex'>
+            <ul className='list-none flex m-0 p-0'>
               {topBarItems.map((item, index) => (
                 <li
                   key={index}
-                  className='flex relative items-center px-[7px] text-[var(--topbar-text-color)] text-[calc(var(--body-font-size) - 1px)] xl:px-[var(--gutter-xs)]
-                  after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(var(--topbar-text-color-rgba), 0.1)] after:-translate-y-1/2
-                  first:ps-0 last:pe-0 last:after:hidden'
+                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-[var(--topbar-text-color)] text-[13px] xl:px-[var(--gutter-xs)] after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
                 >
-                  <span className='flex items-center me-1.5 text-[var(--main-color)]'>
-                    {item.icon}
-                  </span>
-                  <span className='text'>{item.content}</span>
+                  <span className='flex items-center me-1.5'>{item.icon}</span>
+                  <span>{item.content}</span>
                 </li>
               ))}
             </ul>
@@ -161,24 +164,22 @@ function TopBar() {
 
           {/* Topbar Right */}
           <div className='flex'>
-            <ul className='list-none flex'>
+            <ul className='list-none flex m-0 p-0'>
               {rightSideItems.map((item, index) => (
                 <li
                   key={index}
-                  className='flex relative items-center px-[7px] text-[var(--topbar-text-color)] text-[calc(var(--body-font-size) - 1px)] xl:px-[var(--gutter-xs)]
-                  after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(var(--topbar-text-color-rgba), 0.1)] after:-translate-y-1/2
-                  first:ps-0 last:pe-0 last:after:hidden'
+                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-[var(--topbar-text-color)] text-[13px] xl:px-[var(--gutter-xs)] after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
                 >
                   {item.link ? (
                     <a href={item.link} className='flex items-center'>
-                      <span className='flex items-center me-1.5 text-[var(--main-color)]'>
+                      <span className='flex items-center me-1.5'>
                         {item.icon}
                       </span>
-                      <span className='text'>{item.content}</span>
+                      <span>{item.content}</span>
                     </a>
                   ) : (
                     <>
-                      <span className='flex items-center me-1.5 text-[var(--main-color)]'>
+                      <span className='flex items-center me-1.5'>
                         {item.icon}
                       </span>
                       <span className='text'>{item.content}</span>
@@ -195,44 +196,3 @@ function TopBar() {
 }
 
 export default TopBar
-
-// <div className='hidden lg:block bg-[var(--topbar-bg-color)] py-[6px] border-b border-[rgba(var(--topbar-text-color-rgba),0.1)]'>
-//   <div className='container w-full'>
-//     <div className='flex justify-between'>
-//       <div className='flex'>
-//         <ul className=''>
-//           <li className=''>
-//             <span className='text-[#fed700] flex items-centers mr-0.5'>
-//               <svg
-//                 xmlns='http://www.w3.org/2000/svg'
-//                 viewBox='0 0 24 24'
-//                 fill='currentColor'
-//                 className='w-3.5 h-3.5'
-//               >
-//                 <title>phone</title>
-//                 <path
-//                   fill-rule='evenodd'
-//                   d='M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z'
-//                   clip-rule='evenodd'
-//                 />
-//               </svg>
-//             </span>
-//             <span>+92 335-8544254</span>
-//           </li>
-//           <li className='flex relative items-center px-[7px]'>
-//             <span></span>
-//             <span></span>
-//           </li>
-//         </ul>
-//       </div>
-//     </div>
-//     <div>
-//       <div>
-//         <ul>
-//           <li></li>
-//           <li></li>
-//         </ul>
-//       </div>
-//     </div>
-//   </div>
-// </div>
