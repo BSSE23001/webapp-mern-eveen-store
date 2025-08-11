@@ -233,23 +233,26 @@
   --spacing-gutter-xlg: 40px;
 
   /* Font Sizes */
-  --font-size-body: 14px;
-  --font-size-nav: 14px;
-  --font-size-nav-sub: 14px;
-  --font-size-section-heading: 22px;
-  --font-size-btn1: 14px;
-  --font-size-btn2: 14px;
-  --font-size-product-card-title: 13px;
-  --font-size-product-card-vendor: 13px;
-  --font-size-product-card-price: 14px;
-  --font-size-product-card-price-sale: 14px;
-  --font-size-product-card-price-compare: 12px;
-  --font-size-heading-h1: 36px;
-  --font-size-heading-h2: 30px;
-  --font-size-heading-h3: 22px;
-  --font-size-heading-h4: 20px;
-  --font-size-heading-h5: 18px;
-  --font-size-heading-h6: 16px;
+
+  --text-size-body: 14px;
+  --text-size-nav: 14px;
+  --text-size-nav-sub: 14px;
+  --text-size-section-heading: 22px;
+  --text-size-btn1: 14px;
+  --text-size-btn2: 14px;
+  --text-size-product-card-title: 13px;
+  --text-size-product-card-vendor: 13px;
+  --text-size-product-card-price: 14px;
+  --text-size-product-card-price-sale: 14px;
+  --text-size-product-card-price-compare: 12px;
+  --text-size-heading-h1: 36px;
+  --text-size-heading-h2: 30px;
+
+  --text-size-heading-h3: 22px;
+
+  --text-size-heading-h4: 20px;
+  --text-size-heading-h5: 18px;
+  --text-size-heading-h6: 16px;
 
   /* Font Weights */
   --font-weight-heading-1: 600;
