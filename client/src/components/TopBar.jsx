@@ -12,7 +12,7 @@ function TopBar() {
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='currentColor'
-          className='w-3.5 h-3.5 text-[var(--main-color)]'
+          className='w-3.5 h-3.5 text-main'
         >
           <title>phone</title>
           <path
@@ -33,7 +33,7 @@ function TopBar() {
           viewBox='0 0 24 24'
           stroke-width='1.5'
           stroke='currentColor'
-          className='w-3.5 h-3.5 text-[var(--main-color)]'
+          className='w-3.5 h-3.5 text-main'
         >
           <title>email_1</title>
           <path
@@ -110,10 +110,10 @@ function TopBar() {
             </svg>
           </span>
 
-          <div className='absolute top-full right-0 w-[200px] bg-white rounded-b-xl shadow-lg border border-[var(--body-border-color)] border-t-2 border-t-[var(--main-color)] z-10 max-h-[60vh] overflow-y-auto hidden group-hover:block transition-all duration-300 ease-in-out'>
+          <div className='absolute top-full right-0 w-[200px] bg-white rounded-b-xl shadow-lg border border-body-border border-t-2 border-t-main z-10 max-h-[60vh] overflow-y-auto hidden group-hover:block transition-all duration-300 ease-in-out'>
             <div className='flex'>
               <div className='flex-1'>
-                <div className='flex items-center justify-between py-[10px] px-[5px] ps-[10px] text-[var(--body-color)] text-xs uppercase border-b border-[var(--body-border-color)]'>
+                <div className='flex items-center justify-between py-[10px] px-[5px] ps-[10px] text-body text-xs uppercase border-b border-body-border'>
                   <span className='font-black'>Currencies</span>
                   <svg
                     version='1.1'
@@ -129,7 +129,7 @@ function TopBar() {
                 <ul className='m-0 p-0'>
                   <li
                     data-value='PKR'
-                    className='py-[5px] px-[10px] text-xs uppercase cursor-pointer text-[var(--body-color)] hover:text-[var(--body-link-hover)] bg-[rgba(51,62,72,.05)] border-l-2 border-transparent'
+                    className='py-[5px] px-[10px] text-xs uppercase cursor-pointer text-body hover:text-body-link-hover bg-topbar-text-transparent border-l-2 border-transparent'
                   >
                     {currency}
                   </li>
@@ -143,7 +143,7 @@ function TopBar() {
   ]
 
   return (
-    <div className='hidden lg:block bg-white py-[6px] border-b border-[rgba(var(--topbar-text-color-rgba),0.1)]'>
+    <div className='hidden lg:block bg-white py-[6px] border-b border-topbar-text-transparent-2'>
       <div className='w-full px-[15px] mx-auto'>
         {/* Topbar Wrapper */}
         <div className='flex justify-between'>
@@ -153,7 +153,7 @@ function TopBar() {
               {topBarItems.map((item, index) => (
                 <li
                   key={index}
-                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-[var(--topbar-text-color)] text-[13px] xl:px-[var(--gutter-xs)] after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
+                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-topbar-text text-[13px] xl:px-gutter-xs after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
                 >
                   <span className='flex items-center me-1.5'>{item.icon}</span>
                   <span>{item.content}</span>
@@ -168,7 +168,7 @@ function TopBar() {
               {rightSideItems.map((item, index) => (
                 <li
                   key={index}
-                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-[var(--topbar-text-color)] text-[13px] xl:px-[var(--gutter-xs)] after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
+                  className='flex relative items-center first:ps-0 last:pe-0 last:after:hidden px-[7px] text-topbar-text text-[13px] xl:px-gutter-xs after:content-[""] after:absolute after:top-3/6 after:right-0 after:h-[15px] after:w-[1px] after:bg-[rgba(51,62,72,.1)] after:-translate-y-1/2'
                 >
                   {item.link ? (
                     <a href={item.link} className='flex items-center'>
