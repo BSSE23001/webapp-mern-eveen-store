@@ -1,23 +1,8 @@
-// const Footer = () => {
-//   return (
-//     <div className='mt-auto'>
-//       <h1>Hello</h1>
-//     </div>
-//   )
-// }
-// export default Footer
-
-import React from 'react'
-
-// Assuming you have SVG components for your icons
-// For example:
-// const PaperPlaneIcon = () => ( ... your SVG here ... );
-// const PhoneIcon = () => ( ... your SVG here ... );
-// etc.
+import { useState } from 'react'
 
 const Footer = () => {
   // Use state to manage the menu toggle on small screens
-  const [activeMenu, setActiveMenu] = React.useState(null)
+  const [activeMenu, setActiveMenu] = useState(null)
 
   const handleToggleMenu = (menuName) => {
     setActiveMenu(activeMenu === menuName ? null : menuName)
@@ -94,14 +79,14 @@ const Footer = () => {
 
       {/* Footer Widgets Section */}
       <div className='bg-[#f8f8f8] pt-[92px] pb-[66px]'>
-        <div className='pr-[40px] pl-[40px] container mx-auto'>
+        <div className='pr-[45px] pl-[45px] container mx-auto'>
           <div className='grid grid-cols-1 gap-gutter-lg md:grid-cols-4 md:gap-gutter-sm lg:justify-between'>
             {/* Contact Information Block */}
             <div className='flex flex-col'>
               <div className='flex'>
                 <a href='/' className='decoration-0 text-body-link'>
                   <img
-                    className='w-[200px]'
+                    className='w-[200px] h-full'
                     src='//eveen.pk/cdn/shop/files/logo_94a8b223-deab-4122-b823-38fd49b52dde_200x.png?v=1671623025'
                     alt='eveen.pk'
                   />
@@ -152,29 +137,30 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
               <h6
-                className='flex items-center justify-between cursor-pointer md:cursor-default'
+                className='flex items-center justify-between cursor-pointer md:cursor-default text-size-heading-h6 font-heading-6 text-body'
                 onClick={() => handleToggleMenu('quick-links')}
               >
                 Quick Links
-                <span className='flex items-center transition-transform duration-350 md:hidden'>
+                <span className='flex items-center md:hidden'>
                   <svg
                     version='1.1'
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
                     height='16'
                     viewBox='0 0 41 64'
+                    className={`transition-transform duration-350 ease-in-out ${activeMenu === 'quick-links' ? 'rotate-180' : ''}`}
                   >
                     <path d='M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z'></path>
                   </svg>
                 </span>
               </h6>
               <ul
-                className={`mt-gutter-sm menu-list ${activeMenu === 'quick-links' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
+                className={`mt-gutter-sm ${activeMenu === 'quick-links' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
               >
                 <li className='list-none mb-[12px]'>
                   <a
                     href='/pages/about-us'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     About Us
                   </a>
@@ -183,33 +169,32 @@ const Footer = () => {
             </div>
 
             {/* Customer Service */}
-            <div
-              className={`block-menu ${activeMenu === 'customer-service' ? 'active' : ''}`}
-            >
+            <div>
               <h6
-                className='flex items-center justify-between cursor-pointer md:cursor-default'
+                className='flex items-center justify-between cursor-pointer md:cursor-default text-size-heading-h6 font-heading-6 text-body'
                 onClick={() => handleToggleMenu('customer-service')}
               >
                 Customer Services
-                <span className='flex items-center transition-transform duration-350 md:hidden'>
+                <span className='flex items-center md:hidden'>
                   <svg
                     version='1.1'
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
                     height='16'
                     viewBox='0 0 41 64'
+                    className={`transition-transform duration-350 ease-in-out ${activeMenu === 'quick-links' ? 'rotate-180' : ''}`}
                   >
                     <path d='M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z'></path>
                   </svg>
                 </span>
               </h6>
               <ul
-                className={`mt-gutter-sm menu-list ${activeMenu === 'customer-service' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
+                className={`mt-gutter-sm ${activeMenu === 'customer-service' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
               >
                 <li className='list-none mb-[12px]'>
                   <a
                     href='/pages/privacy-statement'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     Privacy Policy
                   </a>
@@ -217,7 +202,7 @@ const Footer = () => {
                 <li className='list-none mb-[12px]'>
                   <a
                     href='/pages/exchange-policy'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     Exchange Policy
                   </a>
@@ -225,7 +210,7 @@ const Footer = () => {
                 <li className='list-none mb-[12px]'>
                   <a
                     href='/pages/advance-payment-policy'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     Advance Payment Policy
                   </a>
@@ -233,7 +218,7 @@ const Footer = () => {
                 <li className='list-none mb-[12px]'>
                   <a
                     href='/pages/terms-of-service'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     Terms of Service
                   </a>
@@ -242,38 +227,40 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div
-              className={`block-menu ${activeMenu === 'contact-us' ? 'active' : ''}`}
-            >
+            <div>
               <h6
-                className='flex items-center justify-between cursor-pointer md:cursor-default'
+                className='flex items-center justify-between cursor-pointer md:cursor-default text-size-heading-h6 font-heading-6 text-body'
                 onClick={() => handleToggleMenu('contact-us')}
               >
                 Contact Us
-                <span className='flex items-center transition-transform duration-350 md:hidden'>
+                <span className='flex items-center md:hidden'>
                   <svg
                     version='1.1'
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
                     height='16'
                     viewBox='0 0 41 64'
+                    className={`transition-transform duration-350 ease-in-out ${activeMenu === 'quick-links' ? 'rotate-180' : ''}`}
                   >
                     <path d='M38.4 26.304q0 0.448-0.384 0.768l-16.64 16.704q-0.32 0.32-0.832 0.32t-0.768-0.32l-16.64-16.704q-0.384-0.32-0.384-0.768t0.384-0.832l1.792-1.792q0.32-0.384 0.768-0.384t0.832 0.384l14.016 14.016 14.080-14.016q0.32-0.384 0.832-0.384t0.768 0.384l1.792 1.792q0.384 0.32 0.384 0.832z'></path>
                   </svg>
                 </span>
               </h6>
               <ul
-                className={`mt-gutter-sm menu-list ${activeMenu === 'contact-us' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
+                className={`mt-gutter-sm ${activeMenu === 'contact-us' ? 'block' : 'hidden'} md:block md:mt-gutter-md`}
               >
                 <li className='list-none mb-[12px]'>
-                  <a href='#' className='text-body-color hover:font-bold'>
+                  <a
+                    href='#'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
+                  >
                     ▤ Mon - Sun / 9:00 AM - 11:00 PM
                   </a>
                 </li>
                 <li className='list-none mb-[12px]'>
                   <a
                     href='mailto:eveendotpk@gmail.com'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     ✉ eveendotpk@gmail.com
                   </a>
@@ -281,7 +268,7 @@ const Footer = () => {
                 <li className='list-none mb-[12px]'>
                   <a
                     href='tel:+923358544254'
-                    className='text-body-color hover:font-bold'
+                    className='text-body hover:font-bold hover:text-body-link-hover transition-all duration-300 ease-in-out'
                   >
                     ✆ +92 335-8544254
                   </a>
@@ -292,9 +279,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright & Payment Section */}
+      {/* Copyright Section */}
       <div className='bg-[#eaeaea] py-gutter-xxs'>
-        <div className='container mx-auto'>
+        <div className='container mx-auto pl-[20px] pr-[20px]'>
           <div className='flex flex-col md:flex-row md:justify-between md:items-center'>
             <div className='text-body-color text-center mb-gutter-xxs md:text-left md:mb-0'>
               © 2025{' '}
@@ -304,12 +291,6 @@ const Footer = () => {
                 </a>
               </strong>
               . All Rights Reserved
-            </div>
-            {/* The payment icons list is empty in the original HTML, but you can populate it here */}
-            <div className='flex justify-center md:justify-end'>
-              <ul className='flex list-none'>
-                {/* Add your payment icon list items here */}
-              </ul>
             </div>
           </div>
         </div>
